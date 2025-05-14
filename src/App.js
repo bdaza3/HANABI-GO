@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Component } from 'react';
 import { Calendar, MapPin, Users, Clock, ChevronDown } from 'lucide-react';
 import './App.css';
-import AI from './AI.jsx'; // Importing the AI component
+import AI from './components/AI.jsx'; // Importing the AI component
 
 
 //http://localhost:3000/ for Simple Browser link
@@ -28,7 +28,7 @@ const festivals = [
     time: "19:00 - 20:30",
     expectedCrowd: "950,000+",
     description: "One of Tokyo's oldest and most famous fireworks festivals, featuring approximately 20,000 fireworks.",
-    imageUrl: "https://images.unsplash.com/photo-1504544750208-dc0358e63f7f?auto=format&fit=crop&q=80"
+    imageUrl: "./fireworksimages/sumida.jpg"
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ const festivals = [
     time: "19:20 - 21:10",
     expectedCrowd: "800,000+",
     description: "Famous for its wide starmine fireworks and moving tribute to peace, featuring the famous 'Phoenix' fireworks.",
-    imageUrl: "https://images.unsplash.com/photo-1581103126419-b03e86056591?auto=format&fit=crop&q=80"
+    imageUrl: "./fireworksimages/nagaoka.jpg"
   },
   {
     id: 3,
@@ -48,7 +48,7 @@ const festivals = [
     time: "19:40 - 20:40",
     expectedCrowd: "200,000+",
     description: "Spectacular fireworks display over the famous 'floating' torii gate of Itsukushima Shrine.",
-    imageUrl: "https://images.unsplash.com/photo-1535159530326-d7bf02d4edb8?auto=format&fit=crop&q=80"
+    imageUrl: "./fireworksimages/miyajima-fireworks.jpg"
   }
 ];
 
@@ -90,8 +90,8 @@ function App() {//App function
       <section className="hero">
         <div className="hero-content">
           <h1 className="hero-title">
-            <span className="hero-title-jp">日本の花火大会</span>
-            <span className="hero-title-en">HANABI GO</span>
+            <span className="hero-title-jp">HANABI GO</span>
+            <span className="hero-subtitle">Discover fireworks near you!</span>
           </h1>
           <p className="hero-subtitle">花火大会の魔法を感じるように</p>
           <button className="scroll-button" onClick={scrollToContent}>
